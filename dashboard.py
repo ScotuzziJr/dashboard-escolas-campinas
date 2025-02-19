@@ -7,7 +7,7 @@ from streamlit_folium import folium_static
 # Carregar os dados
 @st.cache_data
 def load_data():
-    df = pd.read_csv("dataset.csv", delimiter=",")  # Ajuste o delimitador se necessário
+    df = pd.read_csv("data/dataset.csv", delimiter=",")  # Ajuste o delimitador se necessário
 
     # Converter colunas de Latitude e Longitude para número (evita erro no mapa)
     df["Latitude"] = pd.to_numeric(df["Latitude"], errors="coerce")
